@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    
+    <div class="card-body">
+           <div class="card-header">Update User</div>
+               <div class="container">
+       
+                   <div class="card-body">
+                       <form>
+                           <div class="form-group col-md-3">
+                               <label for="inputName" class="form-label">Name</label>
+                               <input type="text" class="form-control" id="inputName" placeholder="Name" [(ngModel)]="userObj.userName" name="userName">
+                           </div>
+                           <div class="form-row">
+                               
+                               <div class="form-group col-md-3">
+                                   <label for="inputCity" class="form-label">City</label>
+                                   <input type="text" class="form-control" id="inputCity"  placeholder="City" [(ngModel)]="userObj.userCity" name="userCity">
+                               </div>
+                               <div class="form-group col-md-3">
+                                   <label for="inputState" class="form-label">State</label>
+                                   <select id="inputState" class="form-select"  [(ngModel)]="userObj.userState" name="userState">
+                                       <option selected>Choose State</option>
+                                       <option value="Hessen">Hessen</option>
+                                       <option value="Bavaria">Bavaria</option>
+                                       <option value="Saxony">Saxony</option>
+                                       <option value="Lower Saxony">Lower Saxony</option>
+                                   </select>
+                               </div>
+                           </div>
+                           <div class="form-row">
+                               
+                               <div class="form-group col-md-3">
+                                   <label for="inputMobile" class="form-label">Mobile</label>
+                                   <input type="text" class="form-control" id="inputMobile"  placeholder="Enter Mobile" [(ngModel)]="userObj.userMobile" name="userMobile">
+                               </div>
+                               <div class="form-group col-md-3">
+                                   <label for="inputAltMobile" class="form-label">Alt Mobile</label>
+                                   <input type="text" class="form-control" id="inputAltMobile"  placeholder="Enter Alt Mobile" [(ngModel)]="userObj.userAltMobile" name="userAltMobile">
+                               </div>
+                               <div class="col-12">
+                                   <button type="button" (click)="updateUser()" class="btn btn-primary">Update User</button>
+                               </div>
+                           </div>
+                       </form>
+                   </div>
+       </div>
+   </div>
+</div>
+
+<router-outlet></router-outlet>

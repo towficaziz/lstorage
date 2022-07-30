@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card-header">User List</div>
+    <div class="card-body">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>City </th>
+            <th>State</th>
+            <th>Mobile</th>
+            <th>Alt Mobile </th>
+            <th>Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usr of userList; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{usr.userName | titlecase}}</td>
+            <td>{{usr.userCity | titlecase}}</td>
+            <td>{{usr.userState}}</td>
+            <td>{{usr.userMobile}}</td>
+            <td>{{usr.userAltMobile}}</td>
+            <td>
+              <button class="btn btn-sm btn-success space" [routerLink]="['/updateUser',usr.userId]">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="delete(usr.userId)">Delete</button>
+            </td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
